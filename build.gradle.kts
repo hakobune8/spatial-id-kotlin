@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "com.github.hakobune8"
-version = "1.0.2"
+version = "1.0.4"
 
 repositories {
     mavenCentral()
