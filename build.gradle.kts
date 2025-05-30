@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "2.1.20"
 }
 
-group = "com.github.HAKOBUNE-THETA"
+group = "com.github.hakobune8"
 version = "1.0.0"
 
 repositories {
