@@ -14,15 +14,15 @@ class Space {
   companion object {
     private const val DEFAULT_ZOOM = 25
 
-    fun getSpaceById(id: String, zoom: Int? = null): Space {
+    fun from(id: String, zoom: Int? = null): Space {
       return Space(id, zoom)
     }
 
-    fun getSpaceByLocation(loc: LngLatWithAltitude, zoom: Int? = null): Space {
+    fun from(loc: LngLatWithAltitude, zoom: Int? = null): Space {
       return Space(loc, zoom)
     }
 
-    fun getSpaceByZFXY(zfxyStr: String): Space {
+    fun from(zfxyStr: String): Space {
       return Space(zfxyStr)
     }
   }
