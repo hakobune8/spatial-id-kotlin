@@ -25,29 +25,29 @@ internal fun getParent(tile: ZFXYTile, steps: Int = 1): ZFXYTile {
 internal fun getChildren(tile: ZFXYTile = ZFXY_ROOT_TILE): List<ZFXYTile> {
   val (z, f, x, y) = tile
   return listOf(
-    ZFXYTile(f * 2,     x * 2,     y * 2,     z + 1),
-    ZFXYTile(f * 2,     x * 2 + 1, y * 2,     z + 1),
-    ZFXYTile(f * 2,     x * 2,     y * 2 + 1, z + 1),
-    ZFXYTile(f * 2,     x * 2 + 1, y * 2 + 1, z + 1),
-    ZFXYTile(f * 2 + 1, x * 2,     y * 2,     z + 1),
-    ZFXYTile(f * 2 + 1, x * 2 + 1, y * 2,     z + 1),
-    ZFXYTile(f * 2 + 1, x * 2,     y * 2 + 1, z + 1),
-    ZFXYTile(f * 2 + 1, x * 2 + 1, y * 2 + 1, z + 1)
+    ZFXYTile(f = f * 2,     x = x * 2,     y = y * 2,     z = z + 1),
+    ZFXYTile(f = f * 2,     x = x * 2 + 1, y = y * 2,     z = z + 1),
+    ZFXYTile(f = f * 2,     x = x * 2,     y = y * 2 + 1, z = z + 1),
+    ZFXYTile(f = f * 2,     x = x * 2 + 1, y = y * 2 + 1, z = z + 1),
+    ZFXYTile(f = f * 2 + 1, x = x * 2,     y = y * 2,     z = z + 1),
+    ZFXYTile(f = f * 2 + 1, x = x * 2 + 1, y = y * 2,     z = z + 1),
+    ZFXYTile(f = f * 2 + 1, x = x * 2,     y = y * 2 + 1, z = z + 1),
+    ZFXYTile(f = f * 2 + 1, x = x * 2 + 1, y = y * 2 + 1, z = z + 1)
   )
 }
 
 internal fun getSurrounding(tile: ZFXYTile = ZFXY_ROOT_TILE): List<ZFXYTile> {
   val (z, f, x, y) = tile
   return listOf(
-    zfxyWraparound(ZFXYTile(f, x,     y,     z)),
-    zfxyWraparound(ZFXYTile(f, x + 1, y,     z)),
-    zfxyWraparound(ZFXYTile(f, x,     y + 1, z)),
-    zfxyWraparound(ZFXYTile(f, x + 1, y + 1, z)),
-    zfxyWraparound(ZFXYTile(f, x - 1, y,     z)),
-    zfxyWraparound(ZFXYTile(f, x,     y - 1, z)),
-    zfxyWraparound(ZFXYTile(f, x - 1, y - 1, z)),
-    zfxyWraparound(ZFXYTile(f, x + 1, y - 1, z)),
-    zfxyWraparound(ZFXYTile(f, x - 1, y + 1, z))
+    zfxyWraparound(ZFXYTile(f = f, x = x,     y = y,     z = z)),
+    zfxyWraparound(ZFXYTile(f = f, x = x + 1, y = y,     z = z)),
+    zfxyWraparound(ZFXYTile(f = f, x = x,     y = y + 1, z = z)),
+    zfxyWraparound(ZFXYTile(f = f, x = x + 1, y = y + 1, z = z)),
+    zfxyWraparound(ZFXYTile(f = f, x = x - 1, y = y,     z = z)),
+    zfxyWraparound(ZFXYTile(f = f, x = x,     y = y - 1, z = z)),
+    zfxyWraparound(ZFXYTile(f = f, x = x - 1, y = y - 1, z = z)),
+    zfxyWraparound(ZFXYTile(f = f, x = x + 1, y = y - 1, z = z)),
+    zfxyWraparound(ZFXYTile(f = f, x = x - 1, y = y + 1, z = z))
   )
 }
 
