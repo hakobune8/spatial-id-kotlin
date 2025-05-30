@@ -25,7 +25,7 @@ internal fun parseZFXYTilehash(thInput: String): ZFXYTile {
 }
 
 internal fun generateTilehash(tile: ZFXYTile): String {
-  var (f, x, y, z) = tile
+  var (z, f, x, y) = tile
   val originalF = f
   var out = ""
 

@@ -8,12 +8,8 @@ internal const val ZFXY_1M_ZOOM_BASE = 25
 internal val ZFXY_ROOT_TILE = ZFXYTile(f = 0, x = 0, y = 0, z = 0)
 private const val RAD2DEG = 180 / Math.PI
 
-internal fun isZFXYTile(tile: Any?): Boolean {
-  return tile is ZFXYTile
-}
-
 internal fun getParent(tile: ZFXYTile, steps: Int = 1): ZFXYTile {
-  val (f, x, y, z) = tile
+  val (z, f, x, y) = tile
   require(steps > 0) { "steps must be greater than 0" }
   require(steps <= z) {
     "Getting parent tile of $tile, $steps steps is not possible because it would go beyond the root tile (z=0)"
@@ -27,7 +23,7 @@ internal fun getParent(tile: ZFXYTile, steps: Int = 1): ZFXYTile {
 }
 
 internal fun getChildren(tile: ZFXYTile = ZFXY_ROOT_TILE): List<ZFXYTile> {
-  val (f, x, y, z) = tile
+  val (z, f, x, y) = tile
   return listOf(
     ZFXYTile(f * 2,     x * 2,     y * 2,     z + 1),
     ZFXYTile(f * 2,     x * 2 + 1, y * 2,     z + 1),
@@ -41,7 +37,7 @@ internal fun getChildren(tile: ZFXYTile = ZFXY_ROOT_TILE): List<ZFXYTile> {
 }
 
 internal fun getSurrounding(tile: ZFXYTile = ZFXY_ROOT_TILE): List<ZFXYTile> {
-  val (f, x, y, z) = tile
+  val (z, f, x, y) = tile
   return listOf(
     zfxyWraparound(ZFXYTile(f, x,     y,     z)),
     zfxyWraparound(ZFXYTile(f, x + 1, y,     z)),
