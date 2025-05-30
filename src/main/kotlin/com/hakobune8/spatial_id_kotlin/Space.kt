@@ -14,16 +14,12 @@ class Space {
   companion object {
     private const val DEFAULT_ZOOM = 25
 
-    fun from(id: String, zoom: Int? = null): Space {
-      return Space(id, zoom)
+    fun from(pathOrHash: String, zoom: Int? = null): Space {
+      return Space(pathOrHash, zoom)
     }
 
-    fun from(loc: LngLatWithAltitude, zoom: Int? = null): Space {
-      return Space(loc, zoom)
-    }
-
-    fun from(zfxyStr: String): Space {
-      return Space(zfxyStr)
+    fun from(location: LngLatWithAltitude, zoom: Int? = null): Space {
+      return Space(location, zoom)
     }
   }
 
