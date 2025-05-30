@@ -2,8 +2,8 @@ plugins {
     kotlin("jvm") version "2.1.20"
 }
 
-group = "com.hakobune8.spatial_id_kotlin"
-version = "1.0-SNAPSHOT"
+group = "com.github.HAKOBUNE-THETA"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
