@@ -2,7 +2,7 @@
 
 Spatial ID Library for Kotlin :heart:
 
-- This is a Kotlin port of the original JavaScript library.
+- This is a Kotlin port of [the original JavaScript library](https://github.com/ouranos-gex/ouranos-gex-lib-for-JavaScript).
 - Some APIs are not available.
 
 ## Installation
