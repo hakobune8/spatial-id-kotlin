@@ -7,7 +7,7 @@ Spatial ID Library for Kotlin :heart:
 
 ## Installation
 
-- Published via [JitPack](http://jitpack.io/).
+- Published via [JitPack](https://jitpack.io/#hakobune8/spatial-id-kotlin).
 - Add the following to your Gradle `dependencies` block:
 
 ```
@@ -16,14 +16,12 @@ implementation 'com.github.hakobune8:spatial-id-kotlin:1.0.4'
 
 ## API List
 
-### Constructors
+### `Space` Constructors
 
 - `Space.from(pathOrHash: String, zoom: Int? = null): Space`
 - `Space.from(location: LngLatWithAltitude, zoom: Int? = null): Space`
 
-Creates a `Space` data class instance, representing a spatial ID.  
-If `zoom` is omitted, the default value of `25` will be used.  
-The following input formats are supported:
+Creates a `Space` data class instance, representing a spatial ID. If `zoom` is omitted, the default value of `25` will be used. The following input formats are supported:
 
 - Path format: e.g. `/15/6/2844/17952`
 - Hash format: e.g. `100213200122640`
